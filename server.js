@@ -6,7 +6,7 @@ let app = express();
 let webpack = require("webpack");
 let compression = require("compression");
 
-// app.use(express.static(path.resolve(__dirname, 'dist')));
+app.use(express.static(path.resolve(__dirname, 'dist')));
 app.use(compression());
 app.use(express.static(path.resolve(__dirname, "dist", "static")));
 app.use(express.static(path.resolve(__dirname, "dist", "assets")));
